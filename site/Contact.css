@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+.background-image {
+    background: url('wildlife-in-masai-mara-kenya.jpg') no-repeat center center/cover;
+    padding: 40px;
+    border-radius: 8px;
+    color: #fff;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+.left-side {
+    flex: 1;
+    margin-right: 20px;
+}
+.right-side {
+    flex: 2;
+}
+.topic {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.input-box {
+    margin-bottom: 15px;
+}
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.button input {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button input:hover {
+    background: #0056b3;
+}

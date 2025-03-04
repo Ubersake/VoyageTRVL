@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Voyage TRVL</title>
+    <link rel="stylesheet" href="SignUp.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Create an Account</h2>
+    <form id="signupForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <span class="error" id="nameError"></span>
+        
+        <input type="email" id="email" placeholder="Email" required>
+        <span class="error" id="emailError"></span>
+        
+        <input type="password" id="password" placeholder="Password" required>
+        <span class="error" id="passwordError"></span>
+        
+        <button type="submit">Sign Up</button>
+    </form>
+    
+    <div class="footer">
+        Already have an account? <a href="Login.html">Log In</a>
+    </div>
+</div>
+
+<script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        let valid = true;
+
+        // Clear previous errors
+        document.getElementById('nameError').textContent = '';
+        document.getElementById('emailError').textContent = '';
+        document.getElementById('passwordError').textContent = '';
+
+        // Name validation
+        if (name.length < 3) {
+            document.getElementById('nameError').textContent = 'Name must be at least 3 characters long.';
+            valid = false;
+        }
+
+        // Email validation
+        if (!/\S+@\S+\.\S+/.test(email)) {
+            document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+            valid = false;
+        }
+
+        // Password validation
+        if (password.length < 6) {
+            document.getElementById('passwordError').textContent = 'Password must be at least 6 characters long.';
+            valid = false;
+        }
+
+        // If valid, show success message (or handle registration)
+        if (valid) {
+            alert('User signed up successfully!');
+            document.getElementById('signupForm').reset();
+        } else {
+            alert('Please fix the errors above and try again.');
+        }
+    });
+</script>
+
+</body>
+</html>

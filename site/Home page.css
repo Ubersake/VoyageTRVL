@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.homebody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px; /* Space for the fixed navbar */
+    padding: 20px;
+}
+
+.h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+input {
+    width: 760px;
+    height: 54px;
+    border-radius: 64px;
+    border: 1px solid #ccc;
+    padding-left: 40px;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: #6a11cb;
+    outline: none;
+}
+
+button {
+    position: absolute;
+    height: 54px;
+    border-radius: 70px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    padding: 0 20px;
+}
+
+button:hover {
+    background: #2575fc;
+}
+
+.cardi {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cardi img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.places {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.places h4 {
+    cursor: pointer;
+    color: white;
+}
+
+.places div {
+    text-align: center;
+}
+
+.footer {
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.footer p {
+    margin: 5px 0;
+    color: white;
+}
+
+.footer a {
+    color: #6a11cb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

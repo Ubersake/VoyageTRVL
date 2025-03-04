@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Voyage TRVL</title>
+    <link rel="stylesheet" href="Contact.css">
+    
+</head>
+<body>
+
+<div class="background-image">
+    <div class="container">
+        <div class="content">
+            <div class="left-side">
+                <div class="address details">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="topic">Social Media</div>
+                    <div class="text-one">Twitter: Voyage-trvl life</div>
+                    <div class="text-two">Facebook: Ishow-voyage</div>
+                </div>
+                <div class="phone details">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="topic">Phone</div>
+                    <div class="text-one">+254-98 9893 564</div>
+                    <div class="text-two">+254-96 3434 567</div>
+                </div>
+                <div class="email details">
+                    <i class="fas fa-envelope"></i>
+                    <div class="topic">Email</div>
+                    <div class="text-one">TraVoyage@gmail.com</div>
+                    <div class="text-two">info.TraVoyage@gmail.com</div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="topic-text">Send us a message</div>
+                <p>If you have any queries please make sure to send us a message here! And please make sure to follow us on our social media pages!</p>
+                <form onsubmit="event.preventDefault();">
+                    <div class="input-box">
+                        <input type="text" placeholder="Enter your name" required />
+                    </div>
+                    <div class="input-box">
+                        <input type="email" placeholder="Enter your email" required />
+                    </div>
+                    <div class="input-box message-box">
+                        <textarea placeholder="What's up" required></textarea>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Send Now" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const form = document.querySelector('form');
+    form.onsubmit = function(event) {
+        event.preventDefault();
+        const name = form[0].value;
+        const email = form[1].value;
+        const message = form[2].value;
+        console.log("Name:", name);
+        console.log("Email:", email);
+        console.log("Message:", message);
+        window.location.reload(); // Refresh the page
+    };
+</script>
+
+</body>
+</html>

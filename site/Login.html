@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Voyage TRVL</title>
+    <link rel="stylesheet" href="Login.css"> <!-- Use the same CSS file -->
+</head>
+<body>
+
+<div class="container">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <span class="error" id="loginEmailError"></span>
+        
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <span class="error" id="loginPasswordError"></span>
+        
+        <button type="submit">Login</button>
+    </form>
+    
+    <div class="footer">
+        Don't have an account? <a href="SignUp.html">Sign Up</a>
+    </div>
+</div>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        const email = document.getElementById('loginEmail').value;
+        const password = document.getElementById('loginPassword').value;
+
+        // Clear previous errors
+        document.getElementById('loginEmailError').textContent = '';
+        document.getElementById('loginPasswordError').textContent = '';
+
+        // Simple validation
+        let valid = true;
+        if (!/\S+@\S+\.\S+/.test(email)) {
+            document.getElementById('loginEmailError').textContent = 'Please enter a valid email address.';
+            valid = false;
+        }
+        if (password.length < 6) {
+            document.getElementById('loginPasswordError').textContent = 'Password must be at least 6 characters long.';
+            valid = false;
+        }
+
+        if (valid) {
+            // Mock login logic (replace with actual login logic)
+            alert('Login successful!');
+            // Proceed with login (e.g., redirect or fetch user data)
+        } else {
+            alert('Please fix the errors above and try again.');
+        }
+    });
+</script>
+
+</body>
+</html>
